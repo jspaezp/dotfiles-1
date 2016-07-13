@@ -1,22 +1,44 @@
 # Navigation aliases
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ']'='xdg-open' #double click equivalent
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Document"
+alias g="cd ~/git"
+alias ec="emacsclient"
+
+# command argument inclusion
 alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano PKGBUILD'
-alias fixit='sudo rm -f /var/lib/pacman/db.lck ; sudo pacman-mirrors -g ; sudo pacman -Syyuu  ; sudo pacman -Suu'
-alias ']'='xdg-open' #double click equivalent
-alias update='yaourt -Syua'
+
+# i3 specific
+
 alias con='nano $HOME/.i3/config'
 alias comp='nano $HOME/.config/compton.conf'
+
+# Manjaro specific
+
+alias fixit='sudo rm -f /var/lib/pacman/db.lck ; sudo pacman-mirrors -g ; sudo pacman -Syyuu  ; sudo pacman -Suu'
+alias np='nano PKGBUILD'
+alias update='yaourt -Syua'
 alias inst='sudo pacman -S'
 alias mirrors='sudo pacman-mirrors -g'
 alias db='sudo pacman -Syy'
 alias printer='system-config-printer'
+
+# Rsync aliases
 
 alias rsync-copy="rsync -avz --progress -h"
 alias rsync-move="rsync -avz --progress -h --remove-source-files"
@@ -45,3 +67,5 @@ function qfind
 	return 0
 end
 
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
