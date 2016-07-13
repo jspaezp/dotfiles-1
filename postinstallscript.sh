@@ -43,7 +43,7 @@ sudo pacman -S --noconfirm nitrogen # wallpaper manager ..
 
 sudo pacman -S --noconfirm gitg
 sudo pacman -S --noconfirm thunderbird
-sudo pacman -S --noconfirm ranger
+sudo pacman -S --noconfirm ranger # terminal interface file manager
 sudo pacman -S --noconfirm tree # fancy way to view file trees in terminal
 sudo pacman -S --noconfirm playonlinux
 sudo pacman -S --noconfirm baobab # graphical visualizer of disk usage
@@ -52,7 +52,7 @@ sudo pacman -S --noconfirm freemind
 sudo pacman -S --noconfirm pymol
 sudo pacman -S --noconfirm youtube-dl clipgrab tuxguitar
 sudo pacman -S --noconfirm skype-call-recorder skype
-sudo pacman -S --noconfirm mupdf mupdf-tools
+sudo pacman -S --noconfirm mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm gnuplot 
 sudo pacman -S --noconfirm aspell aspell-de aspell-en aspell-es # Spell Checking
 
