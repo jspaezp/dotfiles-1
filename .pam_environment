@@ -1,0 +1,17 @@
+LANG  DEFAULT=en_US.UTF-8
+LC_ALL  DEFAULT=${LANG}
+
+XDG_CONFIG_HOME DEFAULT=@{HOME}/.config
+XDG_DATA_HOME DEFAULT=@{HOME}/.local/share
+
+BROWSER=firefox
+ALTERNATE_EDITOR=""
+EDITOR="vim"
+VISUAL="vim"
+
+# Highlight man pages titles in yellow
+LESS_TERMCAP_md	DEFAULT=${yellow}
+MANPAGER='less -X'
+
+HISTSIZE="32768"
+HISTFILESIZE=${HISTSIZE}

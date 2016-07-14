@@ -15,17 +15,20 @@ sudo pacman -S --noconfirm gpointing-device-settings #gui for touchpad synaptics
 
 ## Programming/markdown  languages n development
 
-sudo pacman -S --noconfirm fish wmctrl xsel powerline powerline-fonts powerline-common
-sudo pacman -S --noconfirm js js17
+sudo pacman -S --noconfirm xfce4-terminal
+sudo pacman -S --noconfirm fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer theme dependencies
+# sudo pacman -S --noconfirm js js17
+sudo pacman -S --noconfirm jdk8-openjdk
 sudo pacman -S --noconfirm gcc-fortran
 sudo pacman -S --noconfirm r
 sudo pacman -S --noconfirm python python2
 sudo pacman -S --noconfirm python-pip
 sudo pacman -S --noconfirm virtualbox
 sudo pacman -S --noconfirm gummi texmaker texlive-most
-sudo pacman -S --noconfirm pandoc-crossref
-sudo pacman -S --noconfirm ghc cabal-install happy alex haddock # haskell plataform, for pandoc
-sudo pacman -S --noconfirm docker
+sudo pacman -S --noconfirm pandoc
+# sudo pacman -S --noconfirm pandoc-crossref # TODO check it it is redundant with the cabal install
+# sudo pacman -S --noconfirm ghc cabal-install happy alex haddock # haskell plataform, for pandoc
+# sudo pacman -S --noconfirm docker
 sudo pacman -S --noconfirm zsh zsh-completions
 
 ## Text editors
@@ -33,11 +36,12 @@ sudo pacman -S --noconfirm zsh zsh-completions
 sudo pacman -S --noconfirm gvim nvim
 sudo pacman -S --noconfirm emacs 
 
-## Other WM/DE
+## WM/DE
 
-sudo pacman -S --noconfirm i3-vcs
-sudo pacman -S --noconfirm i3-manjaro
+sudo pacman -S --noconfirm i3-manjaro i3-vcs
 sudo pacman -S --noconfirm nitrogen # wallpaper manager ..
+sudo pacman -S --noconfirm 
+
 
 ## Misc
 
@@ -81,7 +85,7 @@ yaourt -S --noconfirm sublime-text-dev #atom-editor-bin
 #sudo systemctl enable teamviewerd 
 yaourt -S --noconfirm spotify
 #yaourt -S --noconfirm mendeleydesktop # better built from source
-yaourt -S --noconfirm cytoscape
+# yaourt -S --noconfirm cytoscape
 yaourt -S --noconfirm fslint # duplicate file finder
 yaourt -S --noconfirm skypetab-ng-git # adds tabs to skype for linux
 yaourt -S --noconfirm google-talkplugin
@@ -89,11 +93,11 @@ yaourt -S --noconfirm google-talkplugin
 # R packages
 #REQUIREMENT FOR RJAVA …
 
-sudo cat JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre" >> /etc/environment
-source /etc/environment
-echo $JAVA_HOME
+# This section is required sometimes for some reason ...
+#sudo cat JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre" >> /etc/environment
+#source /etc/environment
+#echo $JAVA_HOME
 
-sudo R CMD javareconf
 R CMD javareconf
 
 
@@ -128,10 +132,28 @@ git config --global user.name "jspaezp"
 
 #Final Configs
 
+## Replace alsa with pulseaudio (manjaro-i3 specific)
+if hash install_pulse 2>/dev/null; then
+	install_pulse 
+else
+	echo "no install pulse found"
+fi
+
+## Adding OMF
+
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install
+fish -c "omf install budspencer"
+fish -c "set -U budspencer_nogreeting"
+fish -c "set budspencer_pwdstyle long"
+## Adding Spacemacs
+
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+## Extras 
+
 echo  “manually install virtualbox-host modules”
 
-# TODO add dotfiles to directory ....
-## TODO Restore sessions.txt to session manager addon in chrome
-# TODO backup zshrc, fish config, .spacemacs, 
+# TODO backup zshrc, fish config,  
+# TODO possible mouse synaptics ....
 
 
