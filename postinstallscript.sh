@@ -8,87 +8,87 @@ sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyu
 
 ### Core stuff
 
-sudo pacman -S --noconfirm base base-devel
-sudo pacman -S --noconfirm mlocate #provides updatedb and locate
-sudo pacman -S --noconfirm octopi #graphic updating and installer tool for pacman
-sudo pacman -S --noconfirm gpointing-device-settings #gui for touchpad synaptics config
+sudo pacman -S --noconfirm --needed base base-devel
+sudo pacman -S --noconfirm --needed mlocate #provides updatedb and locate
+sudo pacman -S --noconfirm --needed octopi #graphic updating and installer tool for pacman
+sudo pacman -S --noconfirm --needed gpointing-device-settings #gui for touchpad synaptics config
 
 ## Programming/markdown  languages n development
 
-sudo pacman -S --noconfirm xfce4-terminal
-sudo pacman -S --noconfirm fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer theme dependencies
-# sudo pacman -S --noconfirm js js17
-sudo pacman -S --noconfirm jdk8-openjdk
-sudo pacman -S --noconfirm gcc-fortran
-sudo pacman -S --noconfirm r
-sudo pacman -S --noconfirm python python2
-sudo pacman -S --noconfirm python-pip
-sudo pacman -S --noconfirm virtualbox
-sudo pacman -S --noconfirm gummi texmaker texlive-most
-sudo pacman -S --noconfirm pandoc
-# sudo pacman -S --noconfirm pandoc-crossref # TODO check it it is redundant with the cabal install
-# sudo pacman -S --noconfirm ghc cabal-install happy alex haddock # haskell plataform, for pandoc
-# sudo pacman -S --noconfirm docker
-sudo pacman -S --noconfirm zsh zsh-completions
+sudo pacman -S --noconfirm --needed xfce4-terminal
+sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer theme dependencies
+# sudo pacman -S --noconfirm --needed js js17
+sudo pacman -S --noconfirm --needed jdk8-openjdk
+sudo pacman -S --noconfirm --needed gcc-fortran
+sudo pacman -S --noconfirm --needed r
+sudo pacman -S --noconfirm --needed python python2
+sudo pacman -S --noconfirm --needed python-pip
+sudo pacman -S --noconfirm --needed virtualbox
+sudo pacman -S --noconfirm --needed gummi texmaker texlive-most
+sudo pacman -S --noconfirm --needed pandoc
+# sudo pacman -S --noconfirm --needed pandoc-crossref # TODO check it it is redundant with the cabal install
+# sudo pacman -S --noconfirm --needed ghc cabal-install happy alex haddock # haskell plataform, for pandoc
+# sudo pacman -S --noconfirm --needed docker
+sudo pacman -S --noconfirm --needed zsh zsh-completions
 
 ## Text editors
 
-sudo pacman -S --noconfirm gvim nvim
-sudo pacman -S --noconfirm emacs 
+sudo pacman -S --noconfirm --needed gvim nvim
+sudo pacman -S --noconfirm --needed emacs 
 
 ## WM/DE
 
-sudo pacman -S --noconfirm i3-manjaro i3-vcs
-sudo pacman -S --noconfirm nitrogen # wallpaper manager ..
-sudo pacman -S --noconfirm 
+sudo pacman -S --noconfirm --needed i3-manjaro i3-vcs
+sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
+sudo pacman -S --noconfirm --needed 
 
 
 ## Misc
 
-sudo pacman -S --noconfirm gitg
-sudo pacman -S --noconfirm thunderbird
-sudo pacman -S --noconfirm ranger # terminal interface file manager
-sudo pacman -S --noconfirm tree # fancy way to view file trees in terminal
-sudo pacman -S --noconfirm playonlinux
-sudo pacman -S --noconfirm baobab # graphical visualizer of disk usage
-sudo pacman -S --noconfirm imagewriter
-sudo pacman -S --noconfirm freemind
-sudo pacman -S --noconfirm pymol
-sudo pacman -S --noconfirm youtube-dl clipgrab tuxguitar
-sudo pacman -S --noconfirm skype-call-recorder skype
-sudo pacman -S --noconfirm mupdf mupdf-tools # really fast pdf reader
-sudo pacman -S --noconfirm gnuplot 
-sudo pacman -S --noconfirm aspell aspell-de aspell-en aspell-es # Spell Checking
+sudo pacman -S --noconfirm --needed gitg
+sudo pacman -S --noconfirm --needed thunderbird
+sudo pacman -S --noconfirm --needed ranger # terminal interface file manager
+sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in terminal
+sudo pacman -S --noconfirm --needed playonlinux
+sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
+sudo pacman -S --noconfirm --needed imagewriter
+sudo pacman -S --noconfirm --needed freemind
+sudo pacman -S --noconfirm --needed pymol
+sudo pacman -S --noconfirm --needed youtube-dl clipgrab tuxguitar
+sudo pacman -S --noconfirm --needed skype-call-recorder skype
+sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
+sudo pacman -S --noconfirm --needed gnuplot 
+sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
 
 ### AUR
 
 # Programming Languages and IDE
 # this section most certainly will take a lot of time
-yaourt -S --noconfirm rstudio-desktop-bin 
+yaourt -S --noconfirm --needed rstudio-desktop-bin 
 
 ## UNCOMMENT IF CONSIDERED NECESSARY
-#yaourt -S --noconfirm rstudio-server-git
-#yaourt -S --noconfirm anaconda 
+#yaourt -S --noconfirm --needed rstudio-server-git
+#yaourt -S --noconfirm --needed anaconda 
 # Fixes a bug where spyder would not run
 #sudo conda install -cy asmeurer pango
 
 # Browsers
 
-yaourt -S --noconfirm google-chrome
+yaourt -S --noconfirm --needed google-chrome
 
 # Text editors
 
-yaourt -S --noconfirm sublime-text-dev #atom-editor-bin
+yaourt -S --noconfirm --needed sublime-text-dev #atom-editor-bin
 
 # Misc
-#yaourt -S --noconfirm teamviewer
+#yaourt -S --noconfirm --needed teamviewer
 #sudo systemctl enable teamviewerd 
-yaourt -S --noconfirm spotify
-#yaourt -S --noconfirm mendeleydesktop # better built from source
-# yaourt -S --noconfirm cytoscape
-yaourt -S --noconfirm fslint # duplicate file finder
-yaourt -S --noconfirm skypetab-ng-git # adds tabs to skype for linux
-yaourt -S --noconfirm google-talkplugin
+yaourt -S --noconfirm --needed spotify
+#yaourt -S --noconfirm --needed mendeleydesktop # better built from source
+# yaourt -S --noconfirm --needed cytoscape
+yaourt -S --noconfirm --needed fslint # duplicate file finder
+yaourt -S --noconfirm --needed skypetab-ng-git # adds tabs to skype for linux
+yaourt -S --noconfirm --needed google-talkplugin
 
 # R packages
 #REQUIREMENT FOR RJAVA …
