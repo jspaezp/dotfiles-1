@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm --needed docker
 
 ## Text editors
 
-sudo pacman -S --noconfirm --needed nvim
+sudo pacman -S --noconfirm --needed neovim
 
 ## WM/DE
 
@@ -94,6 +94,9 @@ yaourt -S --noconfirm --needed google-talkplugin
 #echo $JAVA_HOME
 
 sudo R CMD javareconf
+
+mkdir ~/R_libs
+export R_LIBS="~/R_libs"
 Rscript R_packages.R
 
 #dotfiles and config files
@@ -103,6 +106,7 @@ git config --global user.name "jspaezp"
 #Final Configs
 
 ## Replace alsa with pulseaudio (manjaro-i3 specific)
+
 if hash install_pulse 2>/dev/null; then
 	install_pulse
 else
@@ -120,6 +124,7 @@ fish -c "set budspencer_pwdstyle long"
 
 ## Adding Spacemacs
 
+rm -rf ~/.emacs.d
 sudo pacman -S --noconfirm --needed emacs 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
