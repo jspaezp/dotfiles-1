@@ -21,7 +21,7 @@ sudo pacman -S --noconfirm --needed r gcc-fortran
 sudo pacman -S --noconfirm --needed js js17
 sudo pacman -S --noconfirm --needed python-pip python python2
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
-sudo pacman -S --noconfirm --needed texmaker texlive-most
+# sudo pacman -S --noconfirm --needed texmaker texlive-most
 sudo pacman -S --noconfirm --needed virtualbox
 sudo pacman -S --noconfirm --needed zsh zsh-completions
 sudo pacman -S --noconfirm --needed gitg
@@ -82,7 +82,7 @@ yaourt -S --noconfirm --needed rstudio-desktop-bin
 
 # Browsers
 
-yaourt -S --noconfirm --needed google-chrome
+# yaourt -S --noconfirm --needed google-chrome
 
 # Text editors
 
@@ -144,6 +144,10 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ## Adding other dotfiles
 
 source ./bootstrap.sh
+chsh -s /usr/bin/fish
+
+git config --global user.email jspaezp@unal.edu.co
+git config --global user.name jspaezp
 
 ## Extras
 

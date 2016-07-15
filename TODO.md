@@ -1,2 +1,3 @@
 TODO check if .dmenu is compatible with .config/dmenu
 TODO review if .Xresources is necessary .... 
+TODO add alias to reduce the necessary flags in pacman
