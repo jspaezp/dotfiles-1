@@ -3,7 +3,10 @@
 #this code pretends to isntall all my commonly used programs
 #starts with Manjaro 
 
-sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  --noconfirm && sudo pacman -Suu --noconfirm
+sudo rm -f /var/lib/pacman/db.lck 
+sudo pacman-mirrors -g 
+sudo pacman -Syyuu  --noconfirm 
+sudo pacman -Suu --noconfirm
 
 # Core stuff
 
