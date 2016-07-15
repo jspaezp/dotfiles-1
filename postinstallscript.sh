@@ -1,8 +1,8 @@
 
 #!/bin/sh
 
-#this code pretends to isntall all my commonlly used programs
-#starts with Manjaro
+#this code pretends to isntall all my commonly used programs
+#starts with Manjaro 
 
 sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  --noconfirm && sudo pacman -Suu --noconfirm
 
@@ -10,52 +10,51 @@ sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyu
 
 sudo pacman -S --noconfirm --needed base base-devel
 sudo pacman -S --noconfirm --needed mlocate #provides updatedb and locate
-sudo pacman -S --noconfirm --needed octopi #graphic updating and installer tool for pacman
-sudo pacman -S --noconfirm --needed gpointing-device-settings #gui for touchpad synaptics config
+sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in terminal
+# sudo pacman -S --noconfirm --needed octopi #graphic updating and installer tool for pacman
+# sudo pacman -S --noconfirm --needed gpointing-device-settings #gui for touchpad synaptics config
 
 ## Programming/markdown  languages n development
 
 sudo pacman -S --noconfirm --needed xfce4-terminal
-sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer theme dependencies
-# sudo pacman -S --noconfirm --needed js js17
+sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer fishtheme dependencies
 sudo pacman -S --noconfirm --needed jdk8-openjdk
-sudo pacman -S --noconfirm --needed gcc-fortran
-sudo pacman -S --noconfirm --needed r
-sudo pacman -S --noconfirm --needed python python2
-sudo pacman -S --noconfirm --needed python-pip
-sudo pacman -S --noconfirm --needed virtualbox
+sudo pacman -S --noconfirm --needed r gcc-fortran
 sudo pacman -S --noconfirm --needed gummi texmaker texlive-most
-sudo pacman -S --noconfirm --needed pandoc
-# sudo pacman -S --noconfirm --needed pandoc-crossref # TODO check it it is redundant with the cabal install
-# sudo pacman -S --noconfirm --needed ghc cabal-install happy alex haddock # haskell plataform, for pandoc
-# sudo pacman -S --noconfirm --needed docker
+sudo pacman -S --noconfirm --needed pandoc cabal-install
+sudo pacman -S --noconfirm --needed python-pip python python2
+sudo pacman -S --noconfirm --needed virtualbox
 sudo pacman -S --noconfirm --needed zsh zsh-completions
+sudo pacman -S --noconfirm --needed gitg
+# sudo pacman -S --noconfirm --needed js js17
+# sudo pacman -S --noconfirm --needed pandoc-crossref # TODO check it it is redundant with the cabal install
+# sudo pacman -S --noconfirm --needed ghc happy alex haddock # haskell plataform, for pandoc
+# sudo pacman -S --noconfirm --needed docker
 
 ## Text editors
 
-sudo pacman -S --noconfirm --needed gvim nvim
+sudo pacman -S --noconfirm --needed nvim
 sudo pacman -S --noconfirm --needed emacs 
 
 ## WM/DE
 
 sudo pacman -S --noconfirm --needed i3-manjaro i3-vcs
 sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
-sudo pacman -S --noconfirm --needed 
 
+## Social Networking and internet
+
+sudo pacman -S --noconfirm --needed firefox thunderbird
+sudo pacman -S --noconfirm --needed youtube-dl clipgrab tuxguitar
+sudo pacman -S --noconfirm --needed skype-call-recorder skype
 
 ## Misc
 
-sudo pacman -S --noconfirm --needed gitg
-sudo pacman -S --noconfirm --needed thunderbird
-sudo pacman -S --noconfirm --needed ranger # terminal interface file manager
-sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in terminal
+sudo pacman -S --noconfirm --needed pymol
 sudo pacman -S --noconfirm --needed playonlinux
+sudo pacman -S --noconfirm --needed ranger # terminal interface file manager
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
-sudo pacman -S --noconfirm --needed pymol
-sudo pacman -S --noconfirm --needed youtube-dl clipgrab tuxguitar
-sudo pacman -S --noconfirm --needed skype-call-recorder skype
 sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm --needed gnuplot 
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
@@ -64,6 +63,7 @@ sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell
 
 # Programming Languages and IDE
 # this section most certainly will take a lot of time
+
 yaourt -S --noconfirm --needed rstudio-desktop-bin 
 
 ## UNCOMMENT IF CONSIDERED NECESSARY
@@ -81,14 +81,15 @@ yaourt -S --noconfirm --needed google-chrome
 yaourt -S --noconfirm --needed sublime-text-dev #atom-editor-bin
 
 # Misc
-#yaourt -S --noconfirm --needed teamviewer
-#sudo systemctl enable teamviewerd 
+
 yaourt -S --noconfirm --needed spotify
-#yaourt -S --noconfirm --needed mendeleydesktop # better built from source
-# yaourt -S --noconfirm --needed cytoscape
 yaourt -S --noconfirm --needed fslint # duplicate file finder
 yaourt -S --noconfirm --needed skypetab-ng-git # adds tabs to skype for linux
 yaourt -S --noconfirm --needed google-talkplugin
+#yaourt -S --noconfirm --needed teamviewer
+#sudo systemctl enable teamviewerd 
+#yaourt -S --noconfirm --needed mendeleydesktop # better built from source
+# yaourt -S --noconfirm --needed cytoscape
 
 # R packages
 #REQUIREMENT FOR RJAVA …
@@ -98,25 +99,8 @@ yaourt -S --noconfirm --needed google-talkplugin
 #source /etc/environment
 #echo $JAVA_HOME
 
-R CMD javareconf
-
-
-R -e "install.packages(installed.packages[,1])" #reinstalls packages in home directory
-R -e "source(‘https://bioconductor.org/biocLite.R’)"
-R -e "biocLite(‘Mfuzz’)"
-R -e "
-    install.packages(c('dplyr',
-    'ggplot2',
-    'data.table',
-    'tidyr',
-    'reshape2',
-    ‘plotly’,
-    ‘rjava’,
-    ‘shiny’,
-    ‘miniUI’,
-    ‘dplyr’,
-    ‘randomForest’))"
-
+sudo R CMD javareconf
+Rscript R_packages.R
 
 #Pandoc “addons”
 cabal update
@@ -134,7 +118,7 @@ git config --global user.name "jspaezp"
 
 ## Replace alsa with pulseaudio (manjaro-i3 specific)
 if hash install_pulse 2>/dev/null; then
-	install_pulse 
+	install_pulse
 else
 	echo "no install pulse found"
 fi
@@ -145,11 +129,12 @@ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install
 fish -c "omf install budspencer"
 fish -c "set -U budspencer_nogreeting"
 fish -c "set budspencer_pwdstyle long"
+
 ## Adding Spacemacs
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
-## Extras 
+## Extras
 
 echo  “manually install virtualbox-host modules”
 
