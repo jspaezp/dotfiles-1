@@ -5,7 +5,7 @@
 
 sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  --noconfirm && sudo pacman -Suu --noconfirm
 
-### Core stuff
+# Core stuff
 
 sudo pacman -S --noconfirm --needed base base-devel
 sudo pacman -S --noconfirm --needed mlocate #provides updatedb and locate
@@ -18,23 +18,37 @@ sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in termi
 sudo pacman -S --noconfirm --needed xfce4-terminal
 sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran
+sudo pacman -S --noconfirm --needed js js17
+sudo pacman -S --noconfirm --needed python-pip python python2
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
 sudo pacman -S --noconfirm --needed texmaker texlive-most
-sudo pacman -S --noconfirm --needed python-pip python python2
 sudo pacman -S --noconfirm --needed virtualbox
 sudo pacman -S --noconfirm --needed zsh zsh-completions
 sudo pacman -S --noconfirm --needed gitg
 sudo pacman -S --noconfirm --needed docker
-# sudo pacman -S --noconfirm --needed js js17
 
 ## Text editors
 
-sudo pacman -S --noconfirm --needed neovim
+sudo pacman -S --noconfirm --needed vim neovim
 
 ## WM/DE
 
-sudo pacman -S --noconfirm --needed i3-manjaro i3-vcs
+### Session manager
+lightdm-gtk-greeter
+
+### i3 
+sudo pacman -S --noconfirm --needed i3-manjaro i3-gaps dmenu-manjaro arandr \
+	i3status-manjaro i3-scrot i3lock lxappearance
 sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
+
+### TLI
+sudo pacman -S --noconfirm --needed ranger # file manager
+sudo pacman -S --noconfirm --needed moc # music player
+sudo pacman -S --noconfirm --needed bmenu # terminal system menu
+sudo pacman -S --noconfirm --needed pacli # pacman interface
+sudo pacman -S --noconfirm --needed ncdu # baobab equivalent
+sudo pacman -S --noconfirm --needed speedtest-cli # internet speed tester
+
 
 ## Social Networking and internet
 
@@ -46,7 +60,6 @@ sudo pacman -S --noconfirm --needed skype-call-recorder skype
 
 sudo pacman -S --noconfirm --needed pymol
 sudo pacman -S --noconfirm --needed playonlinux
-sudo pacman -S --noconfirm --needed ranger # terminal interface file manager
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
@@ -128,10 +141,15 @@ rm -rf ~/.emacs.d
 sudo pacman -S --noconfirm --needed emacs 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
+## Adding other dotfiles
+
+source ./bootstrap.sh
+
 ## Extras
 
 echo  "manually install virtualbox-host modules"
-#yaourt -S --noconfirm --needed mendeleydesktop # better built from source
+echo  "mendeleydesktop is  better built from source"
+
 
 # TODO backup zshrc, fish config,  
 # TODO possible mouse synaptics ....
