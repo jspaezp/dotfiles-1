@@ -17,7 +17,6 @@ sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in termi
 ## Programming/markdown  languages n development
 
 sudo pacman -S --noconfirm --needed xfce4-terminal
-sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer fishtheme dependencies
 sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran
 sudo pacman -S --noconfirm --needed gummi texmaker texlive-most
@@ -34,7 +33,6 @@ sudo pacman -S --noconfirm --needed gitg
 ## Text editors
 
 sudo pacman -S --noconfirm --needed nvim
-sudo pacman -S --noconfirm --needed emacs 
 
 ## WM/DE
 
@@ -125,13 +123,15 @@ fi
 
 ## Adding OMF
 
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install
+sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer fishtheme dependencies
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 fish -c "omf install budspencer"
 fish -c "set -U budspencer_nogreeting"
 fish -c "set budspencer_pwdstyle long"
 
 ## Adding Spacemacs
 
+sudo pacman -S --noconfirm --needed emacs 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 ## Extras
