@@ -1,0 +1,1 @@
+TODO check if .dmenu is compatible with .config/dmenu
