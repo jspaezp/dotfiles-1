@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 #this code pretends to isntall all my commonly used programs
@@ -19,16 +18,14 @@ sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in termi
 sudo pacman -S --noconfirm --needed xfce4-terminal
 sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran
-sudo pacman -S --noconfirm --needed gummi texmaker texlive-most
-sudo pacman -S --noconfirm --needed pandoc cabal-install
+sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
+sudo pacman -S --noconfirm --needed texmaker texlive-most
 sudo pacman -S --noconfirm --needed python-pip python python2
 sudo pacman -S --noconfirm --needed virtualbox
 sudo pacman -S --noconfirm --needed zsh zsh-completions
 sudo pacman -S --noconfirm --needed gitg
+sudo pacman -S --noconfirm --needed docker
 # sudo pacman -S --noconfirm --needed js js17
-# sudo pacman -S --noconfirm --needed pandoc-crossref # TODO check it it is redundant with the cabal install
-# sudo pacman -S --noconfirm --needed ghc happy alex haddock # haskell plataform, for pandoc
-# sudo pacman -S --noconfirm --needed docker
 
 ## Text editors
 
@@ -86,12 +83,11 @@ yaourt -S --noconfirm --needed skypetab-ng-git # adds tabs to skype for linux
 yaourt -S --noconfirm --needed google-talkplugin
 #yaourt -S --noconfirm --needed teamviewer
 #sudo systemctl enable teamviewerd 
-#yaourt -S --noconfirm --needed mendeleydesktop # better built from source
 # yaourt -S --noconfirm --needed cytoscape
 
 # R packages
-#REQUIREMENT FOR RJAVA …
 
+#requirement FOR RJAVA …
 # This section is required sometimes for some reason ...
 #sudo cat JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre" >> /etc/environment
 #source /etc/environment
@@ -99,14 +95,6 @@ yaourt -S --noconfirm --needed google-talkplugin
 
 sudo R CMD javareconf
 Rscript R_packages.R
-
-#Pandoc “addons”
-cabal update
-cabal install pandoc-crossref
-
-# Python packages
-
-pip install ipython
 
 #dotfiles and config files
 
@@ -123,7 +111,8 @@ fi
 
 ## Adding OMF
 
-sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts powerline-common task # budspencer fishtheme dependencies
+sudo pacman -S --noconfirm --needed fish wmctrl xsel powerline powerline-fonts \
+     powerline-common task # budspencer fishtheme dependencies
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 fish -c "omf install budspencer"
 fish -c "set -U budspencer_nogreeting"
@@ -136,7 +125,8 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 ## Extras
 
-echo  “manually install virtualbox-host modules”
+echo  "manually install virtualbox-host modules"
+#yaourt -S --noconfirm --needed mendeleydesktop # better built from source
 
 # TODO backup zshrc, fish config,  
 # TODO possible mouse synaptics ....
