@@ -37,12 +37,13 @@ sudo pacman -S --noconfirm --needed vim neovim
 ## WM/DE
 
 ### Session manager
-lightdm-gtk-greeter
+sudo pacman -S --noconfirm --needed lightdm-gtk-greeter
 
 ### i3 
 sudo pacman -S --noconfirm --needed i3-manjaro i3-gaps dmenu-manjaro arandr \
-	i3status-manjaro i3-scrot i3lock lxappearance
+	i3status-manjaro i3-scrot i3lock lxappearance rofi
 sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
+sudo pacman -S --noconfirm --needed i3blocks-gaps-git # wallpaper manager ..
 
 ### TLI
 sudo pacman -S --noconfirm --needed ranger # file manager
@@ -61,12 +62,11 @@ sudo pacman -S --noconfirm --needed skype-call-recorder skype
 
 ## Misc
 
+sudo pacman -S --noconfirm --needed lm_sensors #  sensors appclication ...
+sudo sensors-detect --auto # autodetect sensors  ...
+sudo pacman -S --noconfirm --needed redshift # changes screen colour tone with surroudings
 sudo pacman -S --noconfirm --needed pymol
 sudo pacman -S --noconfirm --needed playonlinux
-<<<<<<< HEAD
-=======
-sudo pacman -S --noconfirm --needed ranger w3w # terminal interface file manager
->>>>>>> devel
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
