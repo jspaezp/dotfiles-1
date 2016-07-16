@@ -46,7 +46,7 @@ sudo pacman -S --noconfirm --needed skype-call-recorder skype
 
 sudo pacman -S --noconfirm --needed pymol
 sudo pacman -S --noconfirm --needed playonlinux
-sudo pacman -S --noconfirm --needed ranger # terminal interface file manager
+sudo pacman -S --noconfirm --needed ranger w3w # terminal interface file manager
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
