@@ -63,6 +63,10 @@ sudo pacman -S --noconfirm --needed skype-call-recorder skype
 
 sudo pacman -S --noconfirm --needed pymol
 sudo pacman -S --noconfirm --needed playonlinux
+<<<<<<< HEAD
+=======
+sudo pacman -S --noconfirm --needed ranger w3w # terminal interface file manager
+>>>>>>> devel
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
