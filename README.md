@@ -87,7 +87,6 @@ Suggestions/improvements
 
 # Sebastian's notes
 
-## Fish Shell 
+## Fish Shell
 
 My interactive shell of preference is fish so I've included its config to this repo, supposing the installation of *oh my fish*
-

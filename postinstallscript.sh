@@ -1,11 +1,11 @@
 #!/bin/sh
 
 #this code pretends to isntall all my commonly used programs
-#starts with Manjaro 
+#starts with Manjaro
 
-sudo rm -f /var/lib/pacman/db.lck 
-sudo pacman-mirrors -g 
-sudo pacman -Syyuu  --noconfirm 
+sudo rm -f /var/lib/pacman/db.lck
+sudo pacman-mirrors -g
+sudo pacman -Syyuu  --noconfirm
 sudo pacman -Suu --noconfirm
 
 # Core stuff
@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in termi
 
 sudo pacman -S --noconfirm --needed xfce4-terminal
 sudo pacman -S --noconfirm --needed jdk8-openjdk
-sudo pacman -S --noconfirm --needed r gcc-fortran
+sudo pacman -S --noconfirm --needed r gcc-fortran-multilib
 sudo pacman -S --noconfirm --needed js js17
 sudo pacman -S --noconfirm --needed python-pip python python2
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
@@ -39,11 +39,11 @@ sudo pacman -S --noconfirm --needed vim neovim
 ### Session manager
 sudo pacman -S --noconfirm --needed lightdm-gtk-greeter
 
-### i3 
+### i3
 sudo pacman -S --noconfirm --needed i3-manjaro i3-gaps dmenu-manjaro arandr \
 	i3status-manjaro i3-scrot i3lock lxappearance rofi
 sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
-sudo pacman -S --noconfirm --needed i3blocks-gaps-git # wallpaper manager ..
+yaourt -S --noconfirm --needed i3blocks-gaps-git # wallpaper manager ..
 
 ### TLI
 sudo pacman -S --noconfirm --needed ranger # file manager
@@ -52,7 +52,6 @@ sudo pacman -S --noconfirm --needed bmenu # terminal system menu
 sudo pacman -S --noconfirm --needed pacli # pacman interface
 sudo pacman -S --noconfirm --needed ncdu # baobab equivalent
 sudo pacman -S --noconfirm --needed speedtest-cli # internet speed tester
-
 
 ## Social Networking and internet
 
@@ -71,7 +70,7 @@ sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
 sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
-sudo pacman -S --noconfirm --needed gnuplot 
+sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
 
 ### AUR
@@ -79,21 +78,22 @@ sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell
 # Programming Languages and IDE
 # this section most certainly will take a lot of time
 
-yaourt -S --noconfirm --needed rstudio-desktop-bin 
+yaourt -S --noconfirm --needed rstudio-desktop-bin
 
 ## UNCOMMENT IF CONSIDERED NECESSARY
 #yaourt -S --noconfirm --needed rstudio-server-git
-#yaourt -S --noconfirm --needed anaconda 
+#yaourt -S --noconfirm --needed anaconda
 # Fixes a bug where spyder would not run
 #sudo conda install -cy asmeurer pango
 
 # Browsers
 
-# yaourt -S --noconfirm --needed google-chrome
+yaourt -S --noconfirm --needed google-chrome
 
 # Text editors
 
-yaourt -S --noconfirm --needed sublime-text-dev #atom-editor-bin
+yaourt -S --noconfirm --needed sublime-text-dev
+yaourt -S --noconfirm --needed ttf-font-awesome # awesome font, used in i3bar
 
 # Misc
 
@@ -102,8 +102,7 @@ yaourt -S --noconfirm --needed fslint # duplicate file finder
 yaourt -S --noconfirm --needed skypetab-ng-git # adds tabs to skype for linux
 yaourt -S --noconfirm --needed google-talkplugin
 #yaourt -S --noconfirm --needed teamviewer
-#sudo systemctl enable teamviewerd 
-# yaourt -S --noconfirm --needed cytoscape
+#sudo systemctl enable teamviewerd
 
 # R packages
 
@@ -145,8 +144,13 @@ fish -c "set budspencer_pwdstyle long"
 ## Adding Spacemacs
 
 rm -rf ~/.emacs.d
-sudo pacman -S --noconfirm --needed emacs 
+sudo pacman -S --noconfirm --needed emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+## Adding atom
+
+yaourt -S --noconfirm --needed atom-editor
+source ./atom_packages.sh
 
 ## Adding other dotfiles
 
@@ -161,8 +165,6 @@ git config --global user.name jspaezp
 echo  "manually install virtualbox-host modules"
 echo  "mendeleydesktop is  better built from source"
 
-
-# TODO backup zshrc, fish config,  
+# TODO backup zshrc, fish config,
 # TODO possible mouse synaptics ....
-
-
+# TODO backup atom config files
