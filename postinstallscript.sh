@@ -21,7 +21,7 @@ sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in termi
 sudo pacman -S --noconfirm --needed xfce4-terminal
 sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran-multilib
-sudo pacman -S --noconfirm --needed js js17
+sudo pacman -S --noconfirm --needed js js17 jq
 sudo pacman -S --noconfirm --needed python-pip python python2
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
 # sudo pacman -S --noconfirm --needed texmaker texlive-most
@@ -72,6 +72,7 @@ sudo pacman -S --noconfirm --needed freemind
 sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
+sudo npm install -g reveal-md # holly shit this thing is amazing, really ...
 
 ### AUR
 

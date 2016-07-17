@@ -18,6 +18,7 @@ apm install --dry-run \
   markdown-writer \
   merge-conflicts \
   minimap \
+  pen-paper-coffee-syntax \
   pigments\
   preview-inline \
   project-manager \
