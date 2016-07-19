@@ -12,8 +12,8 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	ln -s ~/.vim $XDG_CONFIG_HOME/nvim ;
-	ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim;
+	ln -si ~/.vim $XDG_CONFIG_HOME/nvim ;
+	ln -si ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

@@ -23,6 +23,7 @@ apm install --dry-run \
   preview-inline \
   project-manager \
   rainbow-tabs \
+  relative-numbers \
   script \
   seti-syntax \
   seti-ui \

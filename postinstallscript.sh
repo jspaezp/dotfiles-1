@@ -23,6 +23,7 @@ sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran-multilib
 sudo pacman -S --noconfirm --needed js js17 jq
 sudo pacman -S --noconfirm --needed python-pip python python2
+yaourt -S --noconfirm --needed python-pywapi
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
 # sudo pacman -S --noconfirm --needed texmaker texlive-most
 sudo pacman -S --noconfirm --needed virtualbox
@@ -64,6 +65,7 @@ sudo pacman -S --noconfirm --needed skype-call-recorder skype
 sudo pacman -S --noconfirm --needed lm_sensors #  sensors appclication ...
 sudo sensors-detect --auto # autodetect sensors  ...
 sudo pacman -S --noconfirm --needed redshift # changes screen colour tone with surroudings
+sudo pacman -S --noconfirm --needed unison # similar to rsync but bidirectional
 sudo pacman -S --noconfirm --needed pymol
 sudo pacman -S --noconfirm --needed playonlinux
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage

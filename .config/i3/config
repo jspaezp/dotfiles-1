@@ -311,7 +311,7 @@ bar {
         separator          $transparent
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $darkwhite
+        focused_workspace  $darkwhite   $transparent $darkwhite
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
         urgent_workspace   $darkred     $darkred     $transparent
@@ -329,7 +329,8 @@ exec --no-startup-id clipit &
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id conky -c ~/.config/conky/Vision/conky.conf &
-# exec --no-startup-id insync start
+exec --no-startup-id conky -c ~/.config/conky/conly_asset &
+# exec --no-startup-id insync start &
 exec --no-startup-id xautolock -time 10 -locker blurlock &
 exec --no-startup-id redshift-gtk &
 
