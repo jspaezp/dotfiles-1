@@ -329,7 +329,7 @@ exec --no-startup-id clipit &
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id conky -c ~/.config/conky/Vision/conky.conf &
-exec --no-startup-id conky -c ~/.config/conky/conly_asset &
+# exec --no-startup-id conky -c ~/.config/conky/conky_asset &
 # exec --no-startup-id insync start &
 exec --no-startup-id xautolock -time 10 -locker blurlock &
 exec --no-startup-id redshift-gtk &

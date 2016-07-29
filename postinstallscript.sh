@@ -143,6 +143,11 @@ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 fish -c "omf install budspencer"
 fish -c "set -U budspencer_nogreeting"
 fish -c "set budspencer_pwdstyle long"
+fish -c "set budspencer_colors 000000 083743 445659 fdf6e3 2e8b57 cb4b16 dc121f af005f 6c71c4 268bd2 2aa198 859900"
+
+## Adding oh my zsh
+
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 ## Adding Spacemacs
 
@@ -158,16 +163,14 @@ source ./atom_packages.sh
 ## Adding other dotfiles
 
 source ./bootstrap.sh
-chsh -s /usr/bin/fish
 
 git config --global user.email jspaezp@unal.edu.co
 git config --global user.name jspaezp
 
 ## Extras
 
-echo  "manually install virtualbox-host modules"
+echo  "manually install virtualbox-host modules (kernell dependent ...)" 
 echo  "mendeleydesktop is  better built from source"
 
-# TODO backup zshrc, fish config,
 # TODO possible mouse synaptics ....
 # TODO backup atom config files
