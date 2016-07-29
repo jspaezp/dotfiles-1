@@ -89,9 +89,10 @@ yaourt -S --noconfirm --needed rstudio-desktop-bin
 # Fixes a bug where spyder would not run
 #sudo conda install -cy asmeurer pango
 
-# Browsers
+# Browsers and internet
 
 yaourt -S --noconfirm --needed google-chrome
+yaourt -S --noconfirm --needed n1 #this email client is amazing ....
 
 # Text editors
 
