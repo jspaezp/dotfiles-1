@@ -37,7 +37,7 @@ apm install --dry-run \
   theme-switch \
   todo-show \
   vim-mode-clipboard-plus \
-  vim-mode-plus
+  vim-mode-plus \
   vim-mode-plus-ex-mode \
   vim-mode-plus-project-find-from-search \
   zen
