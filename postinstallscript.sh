@@ -13,6 +13,7 @@ sudo pacman -Suu --noconfirm
 sudo pacman -S --noconfirm --needed base base-devel
 sudo pacman -S --noconfirm --needed mlocate #provides updatedb and locate
 sudo pacman -S --noconfirm --needed tree # fancy way to view file trees in terminal
+sudo pacman -S --noconfirm --needed imagewriter # image writer  ... 
 # sudo pacman -S --noconfirm --needed octopi #graphic updating and installer tool for pacman
 # sudo pacman -S --noconfirm --needed gpointing-device-settings #gui for touchpad synaptics config
 
