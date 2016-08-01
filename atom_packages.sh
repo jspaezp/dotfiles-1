@@ -1,6 +1,6 @@
 apm install --dry-run \
   atom-material-ui \
-  atom-materual-syntac \
+  atom-material-syntax \
   autocomplete-plus \
   clip-history \
   clipboard-plus\
@@ -33,7 +33,7 @@ apm install --dry-run \
   script \
   seti-syntax \
   seti-ui \
-  temrinal-plus \
+  terminal-plus \
   theme-switch \
   todo-show \
   vim-mode-clipboard-plus \

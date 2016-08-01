@@ -27,8 +27,8 @@ sudo pacman -S --noconfirm --needed python-pip python python2
 yaourt -S --noconfirm --needed python-pywapi
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
 # sudo pacman -S --noconfirm --needed texmaker texlive-most
-sudo pacman -S --noconfirm --needed virtualbox
-sudo pacman -S --noconfirm --needed zsh zsh-completions
+# sudo pacman -S --noconfirm --needed virtualbox
+sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting
 sudo pacman -S --noconfirm --needed gitg
 sudo pacman -S --noconfirm --needed docker
 
@@ -39,13 +39,14 @@ sudo pacman -S --noconfirm --needed vim neovim
 ## WM/DE
 
 ### Session manager
-sudo pacman -S --noconfirm --needed lightdm-gtk-greeter
+# sudo pacman -S --noconfirm --needed lightdm-gtk-greeter
 
 ### i3
 sudo pacman -S --noconfirm --needed i3-manjaro i3-gaps dmenu-manjaro arandr \
 	i3status-manjaro i3-scrot i3lock lxappearance rofi
 sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
-yaourt -S --noconfirm --needed i3blocks-gaps-git # wallpaper manager ..
+yaourt -S --noconfirm --needed i3blocks-gaps-git # 
+3 blocks for i3 gaps
 
 ### TLI
 sudo pacman -S --noconfirm --needed ranger # file manager
@@ -64,6 +65,7 @@ sudo pacman -S --noconfirm --needed skype-call-recorder skype
 ## Misc
 
 sudo pacman -S --noconfirm --needed lm_sensors #  sensors appclication ...
+sudo pacman -S --noconfirm --needed acpi #  sensors appclication ...
 sudo sensors-detect --auto # autodetect sensors  ...
 sudo pacman -S --noconfirm --needed redshift # changes screen colour tone with surroudings
 sudo pacman -S --noconfirm --needed unison # similar to rsync but bidirectional
@@ -75,6 +77,7 @@ sudo pacman -S --noconfirm --needed freemind
 sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
+tudo pacman -S --noconfirm --needed npm
 sudo npm install -g reveal-md # holly shit this thing is amazing, really ...
 
 ### AUR
@@ -125,7 +128,6 @@ Rscript R_packages.R
 
 #dotfiles and config files
 
-git config --global user.name "jspaezp"
 
 #Final Configs
 
