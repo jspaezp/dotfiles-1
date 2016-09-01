@@ -8,6 +8,7 @@ install.packages(
     "dplyr" ,
     "ggplot2" ,
     "ggthemes" ,
+    "GGally" ,
     "haven" ,
     "httr" ,
     "knitr" ,
