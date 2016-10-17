@@ -77,6 +77,7 @@ sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
 tudo pacman -S --noconfirm --needed npm
+tudo pacman -S --noconfirm --needed conky-lua-nv
 sudo npm install -g reveal-md # holly shit this thing is amazing, really ...
 sudo npm install -g phantomjs 
 
