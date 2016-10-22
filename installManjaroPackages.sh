@@ -73,6 +73,7 @@ sudo pacman -S --noconfirm --needed playonlinux
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
+sudo pacman -S --noconfirm --needed kdeconnect
 sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
