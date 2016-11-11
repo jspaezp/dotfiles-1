@@ -95,6 +95,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias anacondapath='export PATH="/opt/anaconda/bin:$PATH"'
+alias ec='emacsclient'
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
