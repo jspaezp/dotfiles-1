@@ -10,7 +10,7 @@ This porject is a fork of the wonderful project by *mathiasbynens* that pretends
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/git/dotfiles`) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/jspaezp/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -27,16 +27,6 @@ Alternatively, to update while avoiding the confirmation prompt:
 ```bash
 set -- -f; source bootstrap.sh
 ```
-
-### Git-free install
-
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/jspaezp/dotfiles-1/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
 
 ### Add custom commands without creating a new fork
 
@@ -60,7 +50,11 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 ## Feedback
 
 Suggestions/improvements
+
+Any major improvement should be done on Mathias's repo, check this.
 [welcome](https://github.com/mathiasbynens/dotfiles/issues)!
+
+Else, feel free to message me directly or send a pull request !
 
 ## Author
 
@@ -87,6 +81,3 @@ Suggestions/improvements
 
 # Sebastian's notes
 
-## Fish Shell
-
-My interactive shell of preference is fish so I've included its config to this repo, supposing the installation of *oh my fish*

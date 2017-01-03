@@ -38,8 +38,6 @@ sudo pacman -S --noconfirm --needed vim neovim
 
 ## WM/DE
 
-sudo pacman -S --noconfirm --needed awesome awful
-
 ### Session manager
 # sudo pacman -S --noconfirm --needed lightdm-gtk-greeter
 
@@ -138,3 +136,4 @@ echo  "manually install virtualbox-host modules (kernell dependent ...)"
 echo  "mendeleydesktop is  better built from source"
 
 # TODO possible mouse synaptics ....
+# TODO backup atom config files
