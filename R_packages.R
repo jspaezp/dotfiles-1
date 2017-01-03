@@ -1,6 +1,9 @@
 #!/usr/bin/R
 
 ## Install the Hadleyverse packages (and some close friends).
+## SHOULD deprecate this since hadley created tidyverse ...
+## or create a package just to install dependencies ....
+## TODO
 install.packages(
   c("broom",
     "DiagrammeR",
@@ -27,6 +30,7 @@ install.packages(
     "rvest" ,
     "rversions" ,
     "testthat" ,
+    "tidyverse" ,
     "tidyr" ,
     "shiny" ,
     "stringr" ,
