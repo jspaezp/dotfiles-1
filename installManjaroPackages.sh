@@ -17,6 +17,10 @@ sudo pacman -S --noconfirm --needed imagewriter # image writer  ...
 # sudo pacman -S --noconfirm --needed octopi #graphic updating and installer tool for pacman
 # sudo pacman -S --noconfirm --needed gpointing-device-settings #gui for touchpad synaptics config
 
+## Replace alsa with pulseaudio
+
+sudo pacman -S --noconfirm --needed manjaro-pulse pa-applet pavucontrol
+
 ## Programming/markdown  languages n development
 
 sudo pacman -S --noconfirm --needed xfce4-terminal
@@ -119,17 +123,10 @@ yaourt -S --noconfirm --needed google-talkplugin
 
 #Final Configs
 
-## Replace alsa with pulseaudio (manjaro-i3 specific)
-
-if hash install_pulse 2>/dev/null; then
-	install_pulse
-else
-	echo "no install pulse found"
-fi
 
 ## Adding other dotfiles
 
-git config --global user.email jspaezp@unal.edu.co
+git config --global user.email jspaezp@gmail.com
 git config --global user.name jspaezp
 
 ## Extras

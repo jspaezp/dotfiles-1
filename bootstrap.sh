@@ -2,8 +2,6 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
-
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
@@ -15,8 +13,6 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	ln -si ~/.vim $XDG_CONFIG_HOME/nvim ;
-	ln -si ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

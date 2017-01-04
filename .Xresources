@@ -1,10 +1,10 @@
 *background:            #272827
 *foreground:            #657b83
 *fading:                15
-*fadeColor:             black
-*cursorColor:           #16A085
-*pointerColorBackground:#2B2C2B
-*pointerColorForeground:#16A085
+*fadecolor:             black
+*cursorcolor:           #16a085
+*pointercolorbackground:#2b2c2b
+*pointercolorforeground:#16a085
 
 !! black dark/light
 *color0:                #282928
@@ -12,23 +12,23 @@
 
 !! red dark/light
 *color1:                #983133
-*color9:                #985F31
+*color9:                #985f31
 
 !! green dark/light
-*color2:                #1D584D
-*color10:               #16A085
+*color2:                #1d584d
+*color10:               #16a085
 
 !! yellow dark/light
-*color3:                #5CE022
-*color11:               #63B93D
+*color3:                #5ce022
+*color11:               #63b93d
 
 !! blue dark/light
-*color4:                #001B33
+*color4:                #001b33
 *color12:               #839496
 
 !! cyan dark/light
-*color6:                #4F6A98
-*color14:               #2269E0
+*color6:                #4f6a98
+*color14:               #2269e0
 
 !! white dark/light
 *color7:                #fdf6e3
@@ -197,15 +197,15 @@ URxvt*saveLines:                      5000
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-! Use extended color scheme
+! use extended color scheme
 rofi.color-enabled:                  true
-! Color scheme for normal row
-rofi.color-normal:                   argb:00000000,  #D8DEE9 , argb:00000000,  #FAC863 ,  #1B2B34
-! Color scheme for urgent row
-rofi.color-urgent:                   argb:00000000,  #F99157 , argb:00000000,  #F99157 ,  #1B2B34
-! Color scheme for active row
-rofi.color-active:                   argb:00000000,  #6699CC , argb:00000000,  #6699CC ,  #1B2B34
-! Color scheme window
-rofi.color-window:                   argb:ee222222,  #FAC863 ,  #FAC863
-! Separator style (none, dash, solid)
+! color scheme for normal row
+rofi.color-normal:                   argb:00000000,  #d8dee9 , argb:00000000,  #fac863 ,  #1b2b34
+! color scheme for urgent row
+rofi.color-urgent:                   argb:00000000,  #f99157 , argb:00000000,  #f99157 ,  #1b2b34
+! color scheme for active row
+rofi.color-active:                   argb:00000000,  #6699cc , argb:00000000,  #6699cc ,  #1b2b34
+! color scheme window
+rofi.color-window:                   argb:ee222222,  #fac863 ,  #fac863
+! separator style (none, dash, solid)
 rofi.separator-style:                solid

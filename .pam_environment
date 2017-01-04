@@ -5,9 +5,9 @@ XDG_CONFIG_HOME DEFAULT=@{HOME}/.config
 XDG_DATA_HOME DEFAULT=@{HOME}/.local/share
 
 BROWSER=firefox
-ALTERNATE_EDITOR=""
-EDITOR="vim"
-VISUAL="vim"
+ALTERNATE_EDITOR=nano
+EDITOR=vim
+VISUAL=nvim
 
 # Highlight man pages titles in yellow
 LESS_TERMCAP_md	DEFAULT=${yellow}
@@ -17,3 +17,5 @@ HISTSIZE="32768"
 HISTFILESIZE=${HISTSIZE}
 
 R_LIBS=@{HOME}/R_libs"
+
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/sebastian/perl5/bin"
