@@ -7,8 +7,7 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
-		--exclude "atom_packages.sh" \
-		--exclude "postinstallscript.sh" \
+		--exclude "*.sh" \
 		--exclude "R_packages.R" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
