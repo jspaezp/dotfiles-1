@@ -28,7 +28,6 @@ sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran-multilib
 sudo pacman -S --noconfirm --needed js js17 jq
 sudo pacman -S --noconfirm --needed python-pip python python2
-yaourt -S --noconfirm --needed python-pywapi
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
 sudo pacman -S --noconfirm --needed texmaker texlive-most
 # sudo pacman -S --noconfirm --needed virtualbox
@@ -54,7 +53,7 @@ sudo pacman -S --noconfirm --needed nitrogen # wallpaper manager ..
 yaourt -S --noconfirm --needed i3blocks-gaps-git # i3 blocks for i3 gaps
 
 ### TLI
-sudo pacman -S --noconfirm --needed ranger # file manager
+sudo pacman -S --noconfirm --needed ranger w3m # file manager and jpeg previewer
 sudo pacman -S --noconfirm --needed moc # music player
 sudo pacman -S --noconfirm --needed bmenu # terminal system menu
 sudo pacman -S --noconfirm --needed pacli # pacman interface
@@ -111,6 +110,7 @@ yaourt -S --noconfirm --needed n1 #this email client is amazing ....
 
 yaourt -S --noconfirm --needed sublime-text-dev
 yaourt -S --noconfirm --needed ttf-font-awesome # awesome font, used in i3bar
+yaourt -S --noconfirm --needed ttf-google-fonts-git # google font, used in conky
 
 # Misc
 

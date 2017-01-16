@@ -12,7 +12,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	source ./installR.sh;
 	source ./installOMF.sh;
 	source ./installOMZ.sh;
-	source ./installAtom.sh;
+#	source ./installAtom.sh;
 	source ./installSpacemacs.sh;
 	source ./installSpaceVim.sh;
 	source ./bootstrap.sh;
