@@ -49,7 +49,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages compleat vi-mode zsh-syntax-highlighting web-search archlinux docker jump)
+plugins=(git colored-man-pages compleat vi-mode zsh-syntax-highlighting web-search archlinux docker jump history-substring-search)
 
 # User configuration
 
@@ -75,6 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias vim='nvim'
 alias ec='emacsclient'
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -149,7 +150,7 @@ ex ()
 #
 # SOURCES
 
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then tmux a || tmux ; fi
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

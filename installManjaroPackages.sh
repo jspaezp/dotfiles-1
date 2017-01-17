@@ -78,13 +78,14 @@ sudo pacman -S --noconfirm --needed playonlinux
 sudo pacman -S --noconfirm --needed baobab # graphical visualizer of disk usage
 sudo pacman -S --noconfirm --needed imagewriter
 sudo pacman -S --noconfirm --needed freemind
+sudo pacman -S --noconfirm --needed dropbox
 sudo pacman -S --noconfirm --needed kdeconnect
 sudo pacman -S --noconfirm --needed mupdf mupdf-tools # really fast pdf reader
 sudo pacman -S --noconfirm --needed gnuplot
 sudo pacman -S --noconfirm --needed aspell aspell-de aspell-en aspell-es # Spell Checking
-tudo pacman -S --noconfirm --needed npm
-tudo pacman -S --noconfirm --needed conky-lua-nv
-tudo pacman -S --noconfirm --needed gsimplecal
+sudo pacman -S --noconfirm --needed npm
+sudo pacman -S --noconfirm --needed conky-lua-nv
+sudo pacman -S --noconfirm --needed gsimplecal
 sudo npm install -g reveal-md # holly shit this thing is amazing, really ...
 sudo npm install -g phantomjs 
 
