@@ -100,6 +100,7 @@ alias rsync-copy="rsync -avz --progress -h"
 alias rsync-move="rsync -avz --progress -h --remove-source-files"
 alias rsync-update="rsync -avzu --progress -h"
 alias rsync-synchronize="rsync -avzu --delete --progress -h"
+alias filter="echo \"awk -F ','  'BEGIN {OFS=','} { if (toupper(\$5) == 'STRING 1')  print }' file1.csv > file2.csv\""
 
 #Show progress while file is copying
 
