@@ -49,7 +49,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages compleat vi-mode zsh-syntax-highlighting web-search archlinux docker jump history-substring-search)
+plugins=(git colored-man-pages compleat vi-mode zsh-syntax-highlighting web-search archlinux docker jump history-substring-search z alias-tips)
 
 # User configuration
 
@@ -88,6 +88,7 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  && sudo pacman -Suu'
 alias ']'='xdg-open' #double click equivalent
+alias less='less -MS'
 alias update='yaourt -Syua'
 alias con='nano $HOME/.i3/config'
 alias comp='nano $HOME/.config/compton.conf'
@@ -95,6 +96,7 @@ alias inst='sudo pacman -S'
 alias mirrors='sudo pacman-mirrors -g'
 alias db='sudo pacman -Syy'
 alias printer='system-config-printer'
+alias lynx='lynx -vikeys -accept_all_cookies -underline_links -nomargins -number_fields'
 
 alias rsync-copy="rsync -avz --progress -h"
 alias rsync-move="rsync -avz --progress -h --remove-source-files"
