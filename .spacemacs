@@ -321,6 +321,10 @@ you should place you code here."
         '((sequence "TODO(t)" "IN PROGRESS(p)" "|" "DONE(d)")
           (sequence "|" "CANCELED(c)")))
 
+  ;; Org tags
+
+  (setq org-tags-column -40)
+
   ;; Add babel 
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -338,7 +342,29 @@ you should place you code here."
 
   ;; Indentation style
 
-  (setq ess-default-style Rstudio)
+  (setq ess-style 'Rstudio)
+
+  ;; HTML mode
+
+  ;; (setq web-mode-markup-indent-offset 2)
+  ;; (setq web-mode-css-indent-offset 2)
+  ;; (setq web-mode-code-indent-offset 2)
+  (setq web-mode-enable-css-colorization t)
+  (setq web-mode-enable-current-column-highlight t)
+
+  ;; sublimity
+
+  (require 'sublimity)
+  ;; (require 'sublimity-scroll)
+  (require 'sublimity-map)
+  ;; (require 'sublimity-attractive)
+  (setq sublimity-map-size 20)
+  (setq sublimity-map-fraction 0.3)
+  (setq sublimity-map-text-scale -7)
+  (add-hook 'sublimity-map-setup-hook
+            (lambda ()
+              (setq buffer-face-mode-face '(:family "Monospace"))
+              (buffer-face-mode)))
 
   )
 

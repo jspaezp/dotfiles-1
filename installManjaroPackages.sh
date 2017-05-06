@@ -29,6 +29,7 @@ sudo pacman -S --noconfirm --needed jdk8-openjdk
 sudo pacman -S --noconfirm --needed r gcc-fortran-multilib
 sudo pacman -S --noconfirm --needed js js17 jq
 sudo pacman -S --noconfirm --needed python-pip python python2
+yaourt -S --noconfirm --needed python-pywapi
 sudo pacman -S --noconfirm --needed pandoc-citeproc pandoc-crossref
 sudo pacman -S --noconfirm --needed texmaker texlive-most
 # sudo pacman -S --noconfirm --needed virtualbox
