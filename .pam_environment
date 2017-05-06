@@ -18,4 +18,4 @@ HISTFILESIZE=${HISTSIZE}
 
 R_LIBS=@{HOME}/R_libs"
 
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/sebastian/perl5/bin"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/sebastian/perl5/bin:/home/sebastian/.gem/ruby/2.4.0/bin:/home/sebastian/bin"

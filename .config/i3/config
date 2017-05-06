@@ -135,7 +135,9 @@ bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x exec xkill
 
 # start program launcher
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 250 -opacity "75" -m -2
+# bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 250 -opacity "75" -m -2
+bindsym $mod+d exec "rofi -combi-modi window,run -show combi -modi combi"
+bindsym $mod+Tab exec rofi -show window
 
 # change focus
 bindsym $mod+h focus left
