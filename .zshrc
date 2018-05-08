@@ -53,14 +53,10 @@ plugins=(git colored-man-pages compleat vi-mode zsh-syntax-highlighting web-sear
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # Put any proprietary or private functions/values in ~/.private, and this will source them
 if [ -f $HOME/.private ]; then
   source $HOME/.private
 fi
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,6 +117,11 @@ alias filter="printf \"awk -F ','  'BEGIN {OFS=','} { if (toupper(\\\$5) == 'STR
 
 alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 
+columnize () 
+{
+  awk -v v='"' 'BEGIN{FS=OFS=v}{gsub(",","",$2);print }' $1  | sed -r 's/,,/, ,/g;s/,,/, ,/g;s/,([^,]{80})[^,]+,/,\1,/g'  | column -s, -t  | less -#20 -N -S
+}
+
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
@@ -154,13 +155,8 @@ ex ()
 }
 #
 # SOURCES
+#
+export RANGER_LOAD_DEFAULT_RC='FALSE'
 
-if [ "$TMUX" = "" ]; then tmux a || tmux ; fi
+#if [ "$TMUX" = "" ]; then tmux a || tmux ; fi
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-PATH="/home/sebastian/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/sebastian/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/sebastian/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/sebastian/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/sebastian/perl5"; export PERL_MM_OPT;
